@@ -1,0 +1,96 @@
+<header>
+  <mat-toolbar class="mat-toolbar">
+    <span>Cadastrar Conta</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</header>
+
+<mat-divider></mat-divider>
+
+<mat-card appearance="outlined">
+<section>
+<form class="example-form" [formGroup]="meuForm" (ngSubmit)="onSubmit()">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput value="ex. Bitcoin" />
+      </mat-form-field>
+
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Natureza</mat-label>
+          <mat-select>
+            <mat-option value="option1">Ativo</mat-option>
+            <mat-option value="option1">Passivo</mat-option>
+            <mat-option value="option1">Despesa</mat-option>
+            <mat-option value="option1">Receita</mat-option>
+            <mat-option value="option1">Resultado</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Enquadramento</mat-label>
+          <mat-select>
+            <mat-option value="option1">Circulante</mat-option>
+            <mat-option value="option1">Realizável</mat-option>
+            <mat-option value="option1">Investimento</mat-option>
+            <mat-option value="option1">Imobilizado</mat-option>
+            <mat-option value="option1">Resultado</mat-option>
+            <mat-option value="option1">CDC</mat-option>
+            <mat-option value="option1">Rotativo</mat-option>
+            <mat-option value="option1">Financiamento</mat-option>
+            <mat-option value="option1">Alimentação fora de casa</mat-option>
+            <mat-option value="option1">Educação</mat-option>
+            <mat-option value="option1">Familiares</mat-option>
+            <mat-option value="option1">Financeiras</mat-option>
+            <mat-option value="option1">FOPAG</mat-option>
+            <mat-option value="option1">Lazer</mat-option>
+            <mat-option value="option1">Mobilidade</mat-option>
+            <mat-option value="option1">Educação</mat-option>
+            <mat-option value="option1">Ordinárias</mat-option>
+            <mat-option value="option1">Streaming</mat-option>
+            <mat-option value="option1">Imobiliárias</mat-option>
+            <mat-option value="option1">Receita</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Mod_Despesa</mat-label>
+          <mat-select>
+            <mat-option value="option1">Compromissada</mat-option>
+            <mat-option value="option1">Gerenciável</mat-option>
+            <mat-option value="option1">OFF</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Código</mat-label>
+          <input matInput placeholder="Ex. 190" />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Saldo Inicial</mat-label>
+          <input matInput placeholder="Ex. R$ 0,00" />
+        </mat-form-field>
+      </td>
+    </tr>
+    <div class="example-button-row">
+      <button type="submit" mat-flat-button>Gravar</button>
+      <button mat-flat-button (click)="ResetForm()">Limpar</button>
+    </div>
+  </table>
+</form>
+
+
+
+
+</section>
+</mat-card>

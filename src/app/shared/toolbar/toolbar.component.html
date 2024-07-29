@@ -1,0 +1,15 @@
+<mat-toolbar class="mat-toolbar">
+  <span>Resultado das Contas</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button>
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+  </button>
+  <button mat-button [matMenuTriggerFor]="menu" >Contas</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/contas">Listar</button>
+    <button mat-menu-item routerLink="/cadastrarcontas">Cadastrar</button>
+
+  </mat-menu>
+
+</mat-toolbar>
+
