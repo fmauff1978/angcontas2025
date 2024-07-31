@@ -14,18 +14,18 @@
     <tr>
       <mat-form-field class="example-full-width">
         <mat-label>Nome</mat-label>
-        <input matInput value="ex. Bitcoin" />
+        <input matInput value="ex. Bitcoin" formControlName="conta" />
       </mat-form-field>
 
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Natureza</mat-label>
-          <mat-select>
-            <mat-option value="option1">Ativo</mat-option>
-            <mat-option value="option1">Passivo</mat-option>
-            <mat-option value="option1">Despesa</mat-option>
-            <mat-option value="option1">Receita</mat-option>
-            <mat-option value="option1">Resultado</mat-option>
+          <mat-select  formControlName="natureza">
+            <mat-option value="ativo">ativo</mat-option>
+            <mat-option value="passivo">passivo</mat-option>
+            <mat-option value="despesa">despesa</mat-option>
+            <mat-option value="receita">receita</mat-option>
+            <mat-option value="resultado">resultado</mat-option>
           </mat-select>
         </mat-form-field>
       </td>
@@ -33,58 +33,54 @@
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Enquadramento</mat-label>
-          <mat-select>
-            <mat-option value="option1">Circulante</mat-option>
-            <mat-option value="option1">Realizável</mat-option>
-            <mat-option value="option1">Investimento</mat-option>
-            <mat-option value="option1">Imobilizado</mat-option>
-            <mat-option value="option1">Resultado</mat-option>
-            <mat-option value="option1">CDC</mat-option>
-            <mat-option value="option1">Rotativo</mat-option>
-            <mat-option value="option1">Financiamento</mat-option>
-            <mat-option value="option1">Alimentação fora de casa</mat-option>
-            <mat-option value="option1">Educação</mat-option>
-            <mat-option value="option1">Familiares</mat-option>
-            <mat-option value="option1">Financeiras</mat-option>
-            <mat-option value="option1">FOPAG</mat-option>
-            <mat-option value="option1">Lazer</mat-option>
-            <mat-option value="option1">Mobilidade</mat-option>
-            <mat-option value="option1">Educação</mat-option>
-            <mat-option value="option1">Ordinárias</mat-option>
-            <mat-option value="option1">Streaming</mat-option>
-            <mat-option value="option1">Imobiliárias</mat-option>
-            <mat-option value="option1">Receita</mat-option>
+          <mat-select formControlName="enquadramento">
+            <mat-option value="circulante">circulante</mat-option>
+            <mat-option value="realizável">realizável</mat-option>
+            <mat-option value="investimento">investimento</mat-option>
+            <mat-option value="imobilizado">imobilizado</mat-option>
+            <mat-option value="resultado">resultado</mat-option>
+            <mat-option value="cdc">cdc</mat-option>
+            <mat-option value="rotativo">rotativo</mat-option>
+            <mat-option value="financiamento">financiamento</mat-option>
+            <mat-option value="alimentação fora de casa">alimentação fora de casa</mat-option>
+            <mat-option value="educação">educação</mat-option>
+            <mat-option value="familiares">familiares</mat-option>
+            <mat-option value="financeiras">financeiras</mat-option>
+            <mat-option value="fopag">fopag</mat-option>
+            <mat-option value="lazer">lazer</mat-option>
+            <mat-option value="mobilidade">mobilidade</mat-option>
+            <mat-option value="imobiliárias">imobiliárias</mat-option>
+            <mat-option value="ordinárias">ordinárias</mat-option>
+            <mat-option value="streaming">streaming</mat-option>
+            <mat-option value="receita">receita</mat-option>
+            <mat-option value="resultado">resultado</mat-option>
+
           </mat-select>
         </mat-form-field>
       </td>
 
       <td>
-        <mat-form-field class="example-full-width">
+        <mat-form-field  class="example-full-width">
           <mat-label>Mod_Despesa</mat-label>
-          <mat-select>
-            <mat-option value="option1">Compromissada</mat-option>
-            <mat-option value="option1">Gerenciável</mat-option>
-            <mat-option value="option1">OFF</mat-option>
+          <mat-select formControlName="mod_despesa">
+            <mat-option value="compromissada">compromissada</mat-option>
+            <mat-option value="gerenciável">gerenciável</mat-option>
+            <mat-option value="off">off</mat-option>
           </mat-select>
         </mat-form-field>
       </td>
 
-      <td>
-        <mat-form-field class="example-full-width">
-          <mat-label>Código</mat-label>
-          <input matInput placeholder="Ex. 190" />
-        </mat-form-field>
-      </td>
+
       <td>
         <mat-form-field class="example-full-width">
           <mat-label>Saldo Inicial</mat-label>
-          <input matInput placeholder="Ex. R$ 0,00" />
+          <input matInput type="number" placeholder="Ex. R$ 0,00" formControlName="saldo" />
         </mat-form-field>
       </td>
     </tr>
     <div class="example-button-row">
       <button type="submit" mat-flat-button>Gravar</button>
-      <button mat-flat-button (click)="ResetForm()">Limpar</button>
+      <button type ="button"  mat-flat-button (click)="ResetForm()">Limpar</button>
     </div>
   </table>
 </form>

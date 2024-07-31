@@ -38,6 +38,7 @@ import { MatPaginator } from '@angular/material/paginator';
   providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
 })
 export class ListacontasComponent  {
+
   private firestore = inject(Firestore);
 
   displayedColumns: string[] = [
@@ -51,11 +52,8 @@ export class ListacontasComponent  {
   ];
 
   dataSource: MatTableDataSource<Conta>;
-  conta: any = {};
   totalparcelas: number;
-
   @ViewChild(MatPaginator) paginator: MatPaginator;
-
   @ViewChild(MatSort) sort: MatSort;
 
 
@@ -64,7 +62,7 @@ export class ListacontasComponent  {
     const q = query(
       coll,
       where('ativa', '==', true),
-      orderBy('natureza', 'asc')
+      orderBy('cod', 'asc')
     );
 
 
@@ -72,15 +70,20 @@ export class ListacontasComponent  {
 
 
     dataStream.subscribe((data) => {
-      console.log(data);
-     
+
+
+
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.sort = this.sort;
+
+
+
       this.totalparcelas = data.reduce(function (a, b) {
         return a + b.saldo;
 
+
       }, 0);
-      console.log(this.totalparcelas)
+
 
     })
 
