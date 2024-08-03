@@ -40,7 +40,7 @@ export class ContasService {
 
   pegarCod(){
 
-   
+
     const q =  query(      this.fonte,      where('ativa', '==', true),      orderBy('cod', 'desc'),      limit(1)    );
     const dataStream = collectionData(q);
     dataStream.subscribe((data) => {
@@ -59,7 +59,7 @@ export class ContasService {
 
   gravarConta(conta, cod){
 
-    const coll =  collection(this.firestore, 'contas');
+    const coll =  collection(this.firestore, 'contas2025');
     addDoc(coll, conta).then(docRef=>{
       console.log('Conta criada com o ID:', docRef.id);
 

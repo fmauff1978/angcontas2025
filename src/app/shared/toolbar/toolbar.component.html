@@ -6,22 +6,20 @@
   </button>
   <button mat-button [matMenuTriggerFor]="menu" >Contas</button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/contas">Listar</button>
-    <button mat-menu-item routerLink="/cadastrarcontas">Cadastrar</button>
-
+    <button mat-menu-item routerLink="contas">Listar</button>
+    <button mat-menu-item routerLink="cadastrarcontas">Cadastrar</button>
   </mat-menu>
 
   <button mat-button [matMenuTriggerFor]="menu" >Agregados</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="/contas">Listar</button>
-    <button mat-menu-item routerLink="/cadastrarcontas">Cadastrar</button>
-
+    <button mat-menu-item   routerLink="/cadastrarcontas">Cadastrar</button>
   </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="menu" >Lançamentos</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item routerLink="/contas">Listar</button>
-    <button mat-menu-item routerLink="/cadastrarcontas">Cadastrar</button>
+  <button mat-button [matMenuTriggerFor]="menu1" >Lançamentos</button>
+  <mat-menu #menu1="matMenu">
+    <button mat-menu-item routerLink="lctos">Listar</button>
+    <button mat-menu-item routerLink="cadastralcto">Cadastrar</button>
 
   </mat-menu>
 

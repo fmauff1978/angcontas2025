@@ -1,0 +1,67 @@
+<mat-toolbar>
+  <span>Contas</span>
+</mat-toolbar>
+
+<mat-form-field>
+  <mat-label>Pesquisar</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Crédito de proventos" #input>
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="demo-position" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+      <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="reg">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Registro </th>
+      <td mat-cell *matCellDef="let row"> {{row.reg}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="datalcto">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Data do Lançamento </th>
+      <td mat-cell *matCellDef="let row"> {{row.datalcto.toDate()| date:'dd/MM/yyyy'}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="descricao">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Descrição </th>
+      <td mat-cell *matCellDef="let row"> {{row.descricao}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="ctadeb">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Débito </th>
+      <td mat-cell *matCellDef="let row"> {{row.contadebitada.conta}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="ctacred">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Crédito </th>
+      <td mat-cell *matCellDef="let row"> {{row.contacreditada.conta}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="valor">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Valor </th>
+      <td mat-cell *matCellDef="let row"> {{row.valor|currency}} </td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+
+
+
+
+
+

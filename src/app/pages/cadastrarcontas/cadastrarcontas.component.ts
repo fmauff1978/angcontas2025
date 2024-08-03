@@ -59,8 +59,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './cadastrarcontas.component.css',
 })
 export class CadastrarcontasComponent implements OnInit {
+  
   private firestore = inject(Firestore);
-
   meuForm: FormGroup;
   cod2: number;
 

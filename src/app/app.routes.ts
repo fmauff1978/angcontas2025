@@ -1,3 +1,5 @@
+import { ListalctosComponent } from './pages/lancamentos/listalctos/listalctos.component';
+import { CadastralctosComponent } from './pages/lancamentos/cadastralctos/cadastralctos.component';
 import { ListaparcelamentosComponent } from './pages/parcelamentos/listaparcelamentos/listaparcelamentos.component';
 import { CadastrarcontasComponent } from './pages/cadastrarcontas/cadastrarcontas.component';
 import { ListacontasComponent } from './pages/listacontas/listacontas.component';
@@ -27,11 +29,20 @@ export const routes: Routes = [
    component: CadastrarparcelamentosComponent
 },
 
-
 {
   path: 'listarparc',
    component: ListaparcelamentosComponent
-}
+},
+
+{
+  path: 'cadastralcto',
+   component: CadastralctosComponent
+},
+
+{
+  path: 'lctos',
+   component: ListalctosComponent
+},
 
 
 
