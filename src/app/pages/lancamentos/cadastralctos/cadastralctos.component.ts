@@ -147,9 +147,11 @@ export class CadastralctosComponent implements OnInit{
          criado_em: Timestamp.now()
     }
 
-      console.log(lctogravar)
 
       this.cs.gravarLcto(lctogravar)
+      const valor = this.meuForm.value.valor
+      this.cs.debitar(contadeb_id,valor)
+      this.cs.creditar(contacred_id, valor)
       this.ResetForm()
 
   }
